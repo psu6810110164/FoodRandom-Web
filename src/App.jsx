@@ -183,7 +183,7 @@ function App() {
                   }
                 }}
               />
-              ✅ ทั้งหมด
+              เลือกทั้งหมด
             </label>
 
             {existingCats.map((cat) => (
