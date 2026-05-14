@@ -169,6 +169,23 @@ function App() {
         <div className="section-body">
           <p className="label-text">หมวดหมู่</p>
           <div className="checkbox-group">
+            
+            {/* 🌟 เพิ่มปุ่ม เลือกทั้งหมด ตรงนี้ 🌟 */}
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={filterCats.length === existingCats.length && existingCats.length > 0}
+                onChange={() => {
+                  if (filterCats.length === existingCats.length) {
+                    setFilterCats([]);
+                  } else {
+                    setFilterCats(existingCats);
+                  }
+                }}
+              />
+              ✅ ทั้งหมด
+            </label>
+
             {existingCats.map((cat) => (
               <label key={cat} className="checkbox-label">
                 <input
